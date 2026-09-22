@@ -14,6 +14,9 @@ def profile():
     hobby=["독서","코딩","게임"]
     return render_template("hobby.html",hobbies=hobby)
 
+@app.route("/greet/<name>")
+def greet(name):
+    return render_template("greet.html",name=name)
 
 if __name__=="__main__":
     app.run(debug=True)
